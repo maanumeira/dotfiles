@@ -1,0 +1,20 @@
+# Secretos y ajustes por máquina — NUNCA deben subir.
+# El .zshrc los carga desde aquí precisamente para que queden fuera de git.
+.zshrc.local
+
+# Perfil personal (edad, universidad, plan de formación): se queda en local.
+.claude/user_context.md
+
+# Skills sincronizadas por Claude Code: las gestiona la app, no yo.
+.claude/skills/synced/
+
+# Permisos por proyecto: son de esta máquina, no de la configuración.
+**/.claude/settings.local.json
+
+# Backups que voy generando al trastear.
+*.backup.*
+*.bak
+
+# Basura de macOS.
+.DS_Store
+._*
