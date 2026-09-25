@@ -49,6 +49,8 @@ link ".claude/CLAUDE.md"
 link ".claude/settings.json"
 link ".claude/statusline-command.sh"
 link ".claude/skills"
+link ".config/AutoRaise/config"
+link "Library/LaunchAgents/com.sbmpost.autoraise.plist"
 
 chmod +x "$DF/.claude/statusline-command.sh" 2>/dev/null || true
 
@@ -60,4 +62,5 @@ Hecho. Pasos siguientes en una máquina nueva:
   3) Secretos: crear ~/.zshrc.local con las API keys (está fuera de git)
   4) Perfil: crear ~/.claude/user_context.md a partir de user_context.example.md
   5) Rectangle: conceder permiso en Ajustes > Privacidad > Accesibilidad
+  6) AutoRaise: bash macos/autoraise.sh (compila desde fuente) + Accesibilidad
 SIGUIENTE

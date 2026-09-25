@@ -18,6 +18,8 @@ adaptado a mi perfil y a mi máquina. Lo que no entendía o no usaba, fuera.
 | `.claude/` | Claude Code: instrucciones globales, ajustes, statusline y skills |
 | `Brewfile` | Herramientas y apps instaladas vía Homebrew |
 | `macos/setup.sh` | Ajustes del sistema (Dock, tiling, Rectangle) |
+| `macos/autoraise.sh` | Compila e instala AutoRaise desde el código fuente |
+| `Library/LaunchAgents/` | Arranque de AutoRaise al iniciar sesión |
 | `bootstrap.sh` | Crea los symlinks en una máquina nueva |
 
 ## Instalación en una máquina nueva
@@ -63,6 +65,14 @@ compromiso consciente: maximizar se usa mucho más. Está comentado en
 **El tiling nativo de macOS está desactivado.** Competía con Rectangle por el
 mismo gesto (arrastrar al borde). Solo se desactiva el arrastre; los atajos
 nativos `Fn+Ctrl+flechas` siguen funcionando.
+
+**AutoRaise se compila, no se instala con brew.** El tap `sbmpost/autoraise`
+lleva sin actualizarse desde 2023 y el proyecto sigue vivo. `macos/autoraise.sh`
+usa `make build`, que incluye `-DEXPERIMENTAL_FOCUS_FIRST`: sin ese flag
+`focusDelay` no funciona y AutoRaise reordena las ventanas en vez de limitarse
+a pasar el foco. La config (`delay=0`, `focusDelay=3`) elige la variante suave:
+el teclado sigue al ratón tras una pausa breve, pero las ventanas no se
+traen al frente solas.
 
 **Los hooks del repo original no están.** Uno de ellos bloqueaba el primer
 Grep/Read de cada sesión de Claude Code para forzar el uso de un MCP que no
