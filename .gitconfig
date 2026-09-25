@@ -1,0 +1,15 @@
+[user]
+	name = Meira
+	email = maanumeira.w@gmail.com
+[core]
+	pager = delta
+	editor = micro
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	line-numbers = true
+[merge]
+	conflictstyle = zdiff3
+[diff]
+	colorMoved = default

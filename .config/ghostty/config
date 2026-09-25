@@ -1,0 +1,44 @@
+# Fuente
+font-family = "JetBrainsMono Nerd Font"
+font-size = 14
+
+# Tema (lista con: ghostty +list-themes)
+theme = "Catppuccin Mocha"
+
+# Apariencia
+background-opacity = 0.99
+window-padding-x = 8
+window-padding-y = 8
+mouse-hide-while-typing = true
+
+# Cursor: línea (bar) con parpadeo simple
+cursor-style = bar
+# cursor-style-blink = true
+
+# Comportamiento
+copy-on-select = clipboard
+confirm-close-surface = false
+
+# Scrollback generoso (logs largos y sesiones de Claude Code)
+scrollback-limit = 10000000
+
+# Option+Backspace borra la palabra anterior (ESC+DEL = Meta+Backspace), como
+# en el resto de macOS. Keybind puntual en vez de macos-option-as-alt para no
+# perder Option como tecla de composición (@ # [ ] { } ~ en teclado español).
+keybind = alt+backspace=text:\x1b\x7f
+
+# Cursor animado: movimiento smooth mediante shader GPU
+# custom-shader = "shaders/cursor_warp.glsl"
+# custom-shader-animation = always
+# custom-shader = "shaders/sonic_boom_cursor.glsl"
+
+# --- PRUEBA AISLADA: pulso ---
+# custom-shader = "shaders/cursor_pulse.glsl"
+# custom-shader-animation = always
+cursor-style-blink = false
+cursor-opacity = 0.0
+
+# Shader fusionado: movimiento smooth + blinking expand
+custom-shader = "shaders/cursor_smooth_pulse.glsl"
+custom-shader-animation = always
+shell-integration-features = no-cursor
