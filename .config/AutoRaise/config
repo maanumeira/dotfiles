@@ -3,12 +3,12 @@
 # delay=0            raising desactivado: la ventana recibe el teclado pero
 #                    NO se trae al frente. Es la variante suave; con delay>0
 #                    la pantalla se reorganiza sola al pasar el ratón.
-# focusDelay=3       foco tras ~150 ms de pausa del cursor (3 x pollMillis).
+# focusDelay=3       foco tras ~100 ms de pausa del cursor (2 x pollMillis).
 #                    Exige una pausa breve, así pasar el ratón de largo no
 #                    roba el foco. Requiere compilar con EXPERIMENTAL_FOCUS_FIRST.
 # pollMillis=50      frecuencia de sondeo del ratón. Mínimo 20; bajarlo sube CPU.
 # requireMouseStop   false: basta la pausa de focusDelay, no una parada completa.
 delay=0
-focusDelay=3
+focusDelay=2
 pollMillis=50
 requireMouseStop=false
