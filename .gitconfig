@@ -13,3 +13,7 @@
 	conflictstyle = zdiff3
 [diff]
 	colorMoved = default
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
